@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		9D8F2A5F2C6F031A0024BA51 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F2A5E2C6F031A0024BA51 /* Base */; };
 		9D8F2A612C6F031A0024BA51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F2A602C6F031A0024BA51 /* Assets.xcassets */; };
 		9D8F2A642C6F031A0024BA51 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F2A632C6F031A0024BA51 /* Base */; };
+		9D8F2A6D2C6F03330024BA51 /* DogPicsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 9D8F2A6C2C6F03330024BA51 /* DogPicsLibrary */; };
+		9D8F2A6F2C6F258C0024BA51 /* DogImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A6E2C6F258C0024BA51 /* DogImageViewController.swift */; };
+		9D8F2A712C6F27990024BA51 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A702C6F27990024BA51 /* CollectionViewCell.swift */; };
+		9D8F2A762C6F71E70024BA51 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A742C6F71E70024BA51 /* Database.xcdatamodeld */; };
+		9D8F2A782C6F721C0024BA51 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A772C6F721C0024BA51 /* CoreDataManager.swift */; };
+		9D8F2A7A2C6F781F0024BA51 /* ImageViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A792C6F781F0024BA51 /* ImageViewController + CollectionView.swift */; };
+		9DDF4F642C707A2000703BB7 /* DogImageControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDF4F632C707A2000703BB7 /* DogImageControllerViewModel.swift */; };
+		9DDF4F662C707ABB00703BB7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDF4F652C707ABB00703BB7 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		9D8F2A602C6F031A0024BA51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D8F2A632C6F031A0024BA51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D8F2A652C6F031A0024BA51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8F2A6E2C6F258C0024BA51 /* DogImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewController.swift; sourceTree = "<group>"; };
+		9D8F2A702C6F27990024BA51 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		9D8F2A752C6F71E70024BA51 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		9D8F2A772C6F721C0024BA51 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9D8F2A792C6F781F0024BA51 /* ImageViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageViewController + CollectionView.swift"; sourceTree = "<group>"; };
+		9DDF4F632C707A2000703BB7 /* DogImageControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageControllerViewModel.swift; sourceTree = "<group>"; };
+		9DDF4F652C707ABB00703BB7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8F2A6D2C6F03330024BA51 /* DogPicsLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,78 @@
 		9D8F2A562C6F031A0024BA51 /* FetchImages */ = {
 			isa = PBXGroup;
 			children = (
-				9D8F2A572C6F031A0024BA51 /* AppDelegate.swift */,
-				9D8F2A592C6F031A0024BA51 /* SceneDelegate.swift */,
-				9D8F2A5B2C6F031A0024BA51 /* ViewController.swift */,
-				9D8F2A5D2C6F031A0024BA51 /* Main.storyboard */,
-				9D8F2A602C6F031A0024BA51 /* Assets.xcassets */,
+				9DDF4F602C70472E00703BB7 /* App and Scene Delegate */,
+				9DDF4F5C2C7046D000703BB7 /* Views */,
+				9DDF4F5F2C70471900703BB7 /* Model */,
+				9DDF4F622C70491000703BB7 /* Assets */,
 				9D8F2A622C6F031A0024BA51 /* LaunchScreen.storyboard */,
 				9D8F2A652C6F031A0024BA51 /* Info.plist */,
 			);
 			path = FetchImages;
+			sourceTree = "<group>";
+		};
+		9DDF4F5C2C7046D000703BB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DDF4F612C7048E900703BB7 /* ViewController */,
+				9DDF4F5E2C7046ED00703BB7 /* DogImageView */,
+				9DDF4F5D2C7046DF00703BB7 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9DDF4F5D2C7046DF00703BB7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F2A5D2C6F031A0024BA51 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9DDF4F5E2C7046ED00703BB7 /* DogImageView */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F2A6E2C6F258C0024BA51 /* DogImageViewController.swift */,
+				9DDF4F632C707A2000703BB7 /* DogImageControllerViewModel.swift */,
+				9D8F2A792C6F781F0024BA51 /* ImageViewController + CollectionView.swift */,
+				9D8F2A702C6F27990024BA51 /* CollectionViewCell.swift */,
+			);
+			path = DogImageView;
+			sourceTree = "<group>";
+		};
+		9DDF4F5F2C70471900703BB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F2A742C6F71E70024BA51 /* Database.xcdatamodeld */,
+				9D8F2A772C6F721C0024BA51 /* CoreDataManager.swift */,
+				9DDF4F652C707ABB00703BB7 /* ImageService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DDF4F602C70472E00703BB7 /* App and Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F2A572C6F031A0024BA51 /* AppDelegate.swift */,
+				9D8F2A592C6F031A0024BA51 /* SceneDelegate.swift */,
+			);
+			path = "App and Scene Delegate";
+			sourceTree = "<group>";
+		};
+		9DDF4F612C7048E900703BB7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F2A5B2C6F031A0024BA51 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9DDF4F622C70491000703BB7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9D8F2A602C6F031A0024BA51 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +162,9 @@
 			dependencies = (
 			);
 			name = FetchImages;
+			packageProductDependencies = (
+				9D8F2A6C2C6F03330024BA51 /* DogPicsLibrary */,
+			);
 			productName = FetchImages;
 			productReference = 9D8F2A542C6F031A0024BA51 /* FetchImages.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 9D8F2A4B2C6F03190024BA51;
+			packageReferences = (
+				9D8F2A6B2C6F03330024BA51 /* XCLocalSwiftPackageReference "../DogPicsLibrary" */,
+			);
 			productRefGroup = 9D8F2A552C6F031A0024BA51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +223,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8F2A712C6F27990024BA51 /* CollectionViewCell.swift in Sources */,
+				9D8F2A7A2C6F781F0024BA51 /* ImageViewController + CollectionView.swift in Sources */,
+				9D8F2A6F2C6F258C0024BA51 /* DogImageViewController.swift in Sources */,
+				9DDF4F662C707ABB00703BB7 /* ImageService.swift in Sources */,
 				9D8F2A5C2C6F031A0024BA51 /* ViewController.swift in Sources */,
 				9D8F2A582C6F031A0024BA51 /* AppDelegate.swift in Sources */,
+				9D8F2A762C6F71E70024BA51 /* Database.xcdatamodeld in Sources */,
+				9D8F2A782C6F721C0024BA51 /* CoreDataManager.swift in Sources */,
+				9DDF4F642C707A2000703BB7 /* DogImageControllerViewModel.swift in Sources */,
 				9D8F2A5A2C6F031A0024BA51 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -290,13 +382,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FetchImages/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,6 +400,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.FetchImages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,13 +412,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FetchImages/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,6 +430,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.FetchImages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +459,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		9D8F2A6B2C6F03330024BA51 /* XCLocalSwiftPackageReference "../DogPicsLibrary" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../DogPicsLibrary;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D8F2A6C2C6F03330024BA51 /* DogPicsLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DogPicsLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9D8F2A742C6F71E70024BA51 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9D8F2A752C6F71E70024BA51 /* Database.xcdatamodel */,
+			);
+			currentVersion = 9D8F2A752C6F71E70024BA51 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9D8F2A4C2C6F03190024BA51 /* Project object */;
 }
