@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mNx-PL-nu9">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -9,27 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FetchImages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FetchImages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-1j-i7H">
-                                <rect key="frame" x="93.333333333333329" y="255" width="206.66666666666669" height="342"/>
+                                <rect key="frame" x="96.666666666666686" y="322.33333333333331" width="200" height="207.66666666666669"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qM-Vn-FI0">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Load Existing Images -&gt;"/>
-                                        <connections>
-                                            <action selector="loadExistingImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7H-42-PXU"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-cL-qiX">
-                                        <rect key="frame" x="3.3333333333333428" y="134.33333333333331" width="200" height="73.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="73.333333333333329"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number of images" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOa-B3-AFV">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -37,7 +30,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="hdR-a6-uGC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At0-fR-khD">
                                                 <rect key="frame" x="60.999999999999986" y="39" width="78.000000000000014" height="34.333333333333343"/>
@@ -50,7 +43,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-4k-FJt">
-                                        <rect key="frame" x="5" y="307.66666666666663" width="196.66666666666666" height="34.333333333333314"/>
+                                        <rect key="frame" x="1.6666666666666572" y="173.33333333333337" width="196.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Delete all older images"/>
                                         <connections>
@@ -67,18 +60,19 @@
                             <constraint firstItem="vHo-1j-i7H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ukc-Dz-He6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RO6-up-jsz"/>
                     <connections>
                         <outlet property="textField" destination="wOa-B3-AFV" id="gse-Kg-cRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="947.32824427480909" y="4.9295774647887329"/>
         </scene>
-        <!--Dog Image View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="fir-sh-LXs">
             <objects>
-                <viewController storyboardIdentifier="ImageViewController" id="wg2-Ed-HZ1" customClass="DogImageViewController" customModule="FetchImages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageViewController" id="wg2-Ed-HZ1" customClass="ImageViewController" customModule="FetchImages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XbI-Ma-vFY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +115,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="660"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-5q-3df">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-5q-3df">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="660"/>
                                                 </imageView>
                                             </subviews>
@@ -159,10 +153,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIc-x7-Kmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783.96946564885491" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="1710.6870229007634" y="4.9295774647887329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1iJ-nM-RtL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNx-PL-nu9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBq-Lh-sIq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oO4-N2-LUS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTc-42-oL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Placeholder" width="259" height="194"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -12,6 +12,7 @@ class CoreDataManager{
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         }
+        CoreDataManager.shared.printDatabasePath()
         return container
     }()
     
@@ -52,10 +53,13 @@ class CoreDataManager{
     
     // MARK: - Delete Object
     func deleteAllDogImages() {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = DogImage.fetchRequest()
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        let fetchRequest: NSFetchRequest<DogImage> = DogImage.fetchRequest()
+        
         do {
-            try context.execute(batchDeleteRequest)
+            let dogImages = try context.fetch(fetchRequest)
+            for dogImage in dogImages {
+                context.delete(dogImage)
+            }
             try context.save()
             print("All DogImage items deleted successfully.")
         } catch let error as NSError {

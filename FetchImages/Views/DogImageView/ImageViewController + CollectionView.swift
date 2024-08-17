@@ -1,5 +1,5 @@
 import UIKit
-extension DogImageViewController : UICollectionViewDataSource{
+extension ImageViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrImages?.count ?? 0
     }
@@ -9,7 +9,7 @@ extension DogImageViewController : UICollectionViewDataSource{
         else{
             return UICollectionViewCell()
         }
-        cell.imageView.image = arrImages?[indexPath.item]
+        cell.imageView.image = arrImages?[indexPath.item] ?? UIImage(resource: ImageResource.placeholder)
         print("\(indexPath.section)  \(indexPath.item)")
         return cell
     }
