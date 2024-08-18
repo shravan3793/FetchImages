@@ -11,8 +11,9 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+        super.viewWillDisappear(animated)        
         self.textField.endEditing(true)
+        self.textField.text = nil
     }
     
     @IBAction func fetchImages(_ sender: Any) {

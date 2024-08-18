@@ -38,6 +38,7 @@ class ImageViewController: UIViewController {
             activityIndicator = UIActivityIndicatorView (style: .large)
             activityIndicator.center = view.center
             activityIndicator.hidesWhenStopped = true
+            activityIndicator.backgroundColor = .white
             view.addSubview(activityIndicator)
         }
     

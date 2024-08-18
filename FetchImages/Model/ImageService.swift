@@ -25,7 +25,7 @@ class ImageService: ImageServiceProtocol{
     
     func fetchSingleImage(completion: @escaping (UIImage?) -> Void) {
             Task{
-                let image =  await FetchDogImages().getImage()
+                let image =  await DogPicsLibrary().getImage()
                 storeImagesInDatabase([image]){
                     let imageIndextoFetch = self.countOfImagesInDB
                     self.fetchSingleImageFromDB(atIndex: imageIndextoFetch){image in
@@ -49,7 +49,7 @@ class ImageService: ImageServiceProtocol{
     
     func fetchImagesFromServer(count: Int, completion: @escaping (UIImage?) -> Void) {
         Task{
-            guard let images = await FetchDogImages().getImages(withCount: count) else {
+            guard let images = await DogPicsLibrary().getImages(withCount: count) else {
                 return
             }
             storeImagesInDatabase(images){
