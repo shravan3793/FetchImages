@@ -10,7 +10,6 @@ extension ImageViewController : UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         cell.imageView.image = arrImages?[indexPath.item] ?? UIImage(resource: ImageResource.placeholder)
-        print("\(indexPath.section)  \(indexPath.item)")
         return cell
     }
 }

@@ -1,0 +1,15 @@
+{
+  "originHash" : "3ab140f511a4ea5637ea221d67db8093bd8dad3248a421c68668025523badafd",
+  "pins" : [
+    {
+      "identity" : "dogpicslibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shravan3793/DogPicsLibrary.git",
+      "state" : {
+        "revision" : "1f9896a1514142a46f002c5e14fe76bd4cd922c5",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

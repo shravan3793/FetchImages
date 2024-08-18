@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,12 +13,12 @@
 		9D8F2A5F2C6F031A0024BA51 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F2A5E2C6F031A0024BA51 /* Base */; };
 		9D8F2A612C6F031A0024BA51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F2A602C6F031A0024BA51 /* Assets.xcassets */; };
 		9D8F2A642C6F031A0024BA51 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F2A632C6F031A0024BA51 /* Base */; };
-		9D8F2A6D2C6F03330024BA51 /* DogPicsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 9D8F2A6C2C6F03330024BA51 /* DogPicsLibrary */; };
 		9D8F2A6F2C6F258C0024BA51 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A6E2C6F258C0024BA51 /* ImageViewController.swift */; };
 		9D8F2A712C6F27990024BA51 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A702C6F27990024BA51 /* CollectionViewCell.swift */; };
 		9D8F2A762C6F71E70024BA51 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A742C6F71E70024BA51 /* Database.xcdatamodeld */; };
 		9D8F2A782C6F721C0024BA51 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A772C6F721C0024BA51 /* CoreDataManager.swift */; };
 		9D8F2A7A2C6F781F0024BA51 /* ImageViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F2A792C6F781F0024BA51 /* ImageViewController + CollectionView.swift */; };
+		9DAC72552C71F06500DAE5AB /* DogPicsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 9DAC72542C71F06500DAE5AB /* DogPicsLibrary */; };
 		9DDF4F642C707A2000703BB7 /* ImageControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDF4F632C707A2000703BB7 /* ImageControllerViewModel.swift */; };
 		9DDF4F662C707ABB00703BB7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDF4F652C707ABB00703BB7 /* ImageService.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D8F2A6D2C6F03330024BA51 /* DogPicsLibrary in Frameworks */,
+				9DAC72552C71F06500DAE5AB /* DogPicsLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +58,7 @@
 			children = (
 				9D8F2A562C6F031A0024BA51 /* FetchImages */,
 				9D8F2A552C6F031A0024BA51 /* Products */,
+				9DAC72502C71EFD100DAE5AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +81,13 @@
 				9D8F2A652C6F031A0024BA51 /* Info.plist */,
 			);
 			path = FetchImages;
+			sourceTree = "<group>";
+		};
+		9DAC72502C71EFD100DAE5AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9DDF4F5C2C7046D000703BB7 /* Views */ = {
@@ -163,7 +171,7 @@
 			);
 			name = FetchImages;
 			packageProductDependencies = (
-				9D8F2A6C2C6F03330024BA51 /* DogPicsLibrary */,
+				9DAC72542C71F06500DAE5AB /* DogPicsLibrary */,
 			);
 			productName = FetchImages;
 			productReference = 9D8F2A542C6F031A0024BA51 /* FetchImages.app */;
@@ -194,7 +202,7 @@
 			);
 			mainGroup = 9D8F2A4B2C6F03190024BA51;
 			packageReferences = (
-				9D8F2A6B2C6F03330024BA51 /* XCLocalSwiftPackageReference "../DogPicsLibrary" */,
+				9DAC72532C71F06500DAE5AB /* XCRemoteSwiftPackageReference "DogPicsLibrary" */,
 			);
 			productRefGroup = 9D8F2A552C6F031A0024BA51 /* Products */;
 			projectDirPath = "";
@@ -468,16 +476,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		9D8F2A6B2C6F03330024BA51 /* XCLocalSwiftPackageReference "../DogPicsLibrary" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../DogPicsLibrary;
+/* Begin XCRemoteSwiftPackageReference section */
+		9DAC72532C71F06500DAE5AB /* XCRemoteSwiftPackageReference "DogPicsLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shravan3793/DogPicsLibrary.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D8F2A6C2C6F03330024BA51 /* DogPicsLibrary */ = {
+		9DAC72542C71F06500DAE5AB /* DogPicsLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 9DAC72532C71F06500DAE5AB /* XCRemoteSwiftPackageReference "DogPicsLibrary" */;
 			productName = DogPicsLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
